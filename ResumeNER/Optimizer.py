@@ -27,7 +27,7 @@ def train(data_path:str = None, model_path:str = None, T = True):
         'max_iterations': 50,
         'feature.possible_transitions': True
     })
-    trainer.train(model_path)
+    trainer.train(model_path + 'model.crfsuite')
     print('Model saved to: {}'.format(model_path))
 
 def test(data_path = None, model_path = None):
@@ -39,7 +39,7 @@ def test(data_path = None, model_path = None):
     '''
     tagger = pycrfsuite.Tagger()
     try:
-        tagger.open(model_path)
+        tagger.open(model_path + 'model.crfsuite')
     except Exception as e:
         print(e)
         print("请先训练模型")
