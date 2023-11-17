@@ -2,3 +2,5 @@
 /__pycache__
 /nlp-master
 ResumeNER/__pycache__
+ResumeNER/data/test.char.bmes.processed
+ResumeNER/data/train.char.bmes.processed
